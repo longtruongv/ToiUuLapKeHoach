@@ -1,0 +1,39 @@
+BCTA Balanced Class Teacher Assignment:
+
+ĐỀ BÀI:
+
+Cho:
+N lớp, M giáo viên
+T(i) là danh sách gv có thể dạy lớp i
+c(i) là số tín chỉ lớp i
+Q = {(i,j)} là cặp lớp i, j trùng giờ
+
+Mục tiêu:
+Phân công sao cho max tổng tín một gv là min
+
+
+MÔ HÌNH HÓA:
+
+Đầu vào:
+Tập lớp học C = {1, ..., N}
+Tập giáo viên G = {1, ..., M}
+Tập cặp lớp trùng giờ Q = {(i1,j1), ..., (ik,jk)}
+T = {T(1), ..., T(N)}, T(i) (\subset G) là tập gv có thể dạy lớp i
+i \in C, c(i) là số tín lớp i
+
+Biến:
+x_ij = 1 (i \in C, j \in G) nếu gv j dạy lớp i, else 0
+maxcredit là max tín một gv
+
+Miền giá trị:
+D(x_ij) = {0, 1} 
+D(maxcredit) = {0, ..., sum{i \in C}(c(i))}
+
+Ràng buộc:
+sum{j \in G}(x_ij)
+sum{j \not\in T(i)}(x_ij) = 0
+x_it + x_jt <= 1 với (i,j) \in Q
+sum{i \in C}(x_it \dot c(i)) <= maxcredit
+
+Mục tiêu:
+minimize(maxcredit)

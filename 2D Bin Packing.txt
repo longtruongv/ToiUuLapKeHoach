@@ -1,0 +1,22 @@
+2D Bin Packing:
+
+ĐỀ BÀI:
+
+Cho:
+N gói hàng
+
+Mục tiêu:
+
+
+
+MÔ HÌNH HÓA:
+
+Đầu vào:
+
+Biến:
+
+Miền giá trị:
+
+Ràng buộc:
+
+Mục tiêu:

@@ -1,0 +1,24 @@
+JobShop Scheduling
+
+ĐỀ BÀI:
+
+Cho:
+
+Mục tiêu:
+
+
+
+MÔ HÌNH HÓA:
+
+Đầu vào:
+Tập job J = {1, ..., n}
+Tập machine M = {1, ..., m}
+
+
+Biến:
+
+Miền giá trị:
+
+Ràng buộc:
+
+Mục tiêu:

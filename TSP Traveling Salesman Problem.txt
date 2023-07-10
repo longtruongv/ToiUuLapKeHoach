@@ -1,0 +1,54 @@
+TSP Traveling Salesman Problem
+
+ĐỀ BÀI:
+
+Cho:
+N thành phố
+c(i,j) là chi phí đi i sang j
+
+Mục tiêu:
+Tìm chu trình min chi phí
+
+
+MÔ HÌNH HÓA (Quy hoạch ràng buộc):
+
+Đầu vào:
+Tập thành phố C = {1, ..., N}
+c(i,j)
+
+Biến:
+x_i là thành phố thứ đến thứ i
+
+Miền giá trị:
+x_i \in C với i \in range(N)
+
+Ràng buộc: 
+x_1 = 1
+x_i != x_j với i != j
+
+Mục tiêu:
+minimize( sum{i \in range(N-1)}( c(x_i, x_(i+1)) ) + c(x_N, x_1) )
+
+
+CÁCH CHỮA KHÁC (Quy hoạch nguyên tuyến tính):
+
+Biến:
+X(i,j) \in {1, 0}
+
+Ràng buộc:
+Ràng buộc mỗi thành phố chỉ 1 vào 1 ra
+sum{i \in range(N) \ {j}}(X(i,j)) = sum{i \in range(N) \ {j}}(X(j,i)) = 1 với j \in range(N)
+Ràng buộc không có chu trình con
+sum{i, j \in range(S), i != j}(X(i,j)) <= |S| - 1 với S \subset range(N), S != range(N)
+
+Mục tiêu:
+minimize( sum{i, j \in range(N), i != j}(X(i,j) \dot c(i,j)) )
+
+
+GIẢM ĐỘ PHỨC TẠP RÀNG BUỘC:
+
+Gợi ý: 
+Miller Tucker   
+Big M constraint
+Thêm biến thứ tự thăm đỉnh
+t_j >= t_i + 1 + (X(i,j)-1) \dot M 

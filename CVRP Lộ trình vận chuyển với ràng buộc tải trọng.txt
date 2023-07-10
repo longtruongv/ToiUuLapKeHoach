@@ -1,0 +1,31 @@
+CVRP Capacitated Vehicle Routing Problem
+
+ĐỀ BÀI:
+
+Cho:
+Kho hàng trung tâm 0 và N khách hàng (1, ..., N)
+Khách hàng i yêu cầu lượng hàng d_i
+K xe, tổng lượng hàng mỗi xe là Q
+D(i,j) là khoảng cách điểm i đến j
+
+Mục tiêu:
+Lập lịch trình sao cho tổng quãng đường ngắn nhất
+
+
+MÔ HÌNH HÓA:
+
+Đầu vào:
+Kho hàng S = 0
+Tập khách hàng N = {1, ..., N}
+Tập xe V = {1, ..., K}
+Q_i là lượng hàng tối đa mỗi xe một chuyến
+D(i,j) là chi phí khách hàng i đến j
+
+Biến:
+
+
+Miền giá trị:
+
+Ràng buộc: 
+
+Mục tiêu:
